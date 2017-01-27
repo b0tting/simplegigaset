@@ -86,14 +86,17 @@ class SimpleGigaset:
         logger.debug("Response text was: " + response.text)
         return response.json()
 
-    def get_current_state(self):
+    def get_current_state(self, eventlimit=3):
         """Fetches a system overview object with the last few events, current state and mode
 
-         Returns:
+        Args:
+            eventlimit (int): The number of events that should be returned in your system state
+
+        Returns:
              dict: A dictionary object with "state", "mode" and "events[]"
 
         """
-        jsonresponse = self._run_request(SimpleGigaset.URL_EVENTS + "?limit=3")
+        jsonresponse = self._run_request(SimpleGigaset.URL_EVENTS + "?limit=" + str(eventlimit))
         state = {"state": jsonresponse["home_state"],
                  "mode": self.get_mode(),
                  "events": [SimpleGigaset._ts_to_datestring(event["ts"]) + " - " + event["type"] for event in jsonresponse["events"]]}
