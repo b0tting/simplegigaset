@@ -13,6 +13,11 @@ Behind the sc(re)n(e)s both site and app connect to a JSON backend. Why they did
  
 If you are looking for anything outside of this, consider the [CLI](https://github.com/dynasticorpheus/gigasetelements-cli) 
 
+## Installation
+Either grab the SimpleGigaset.py file, or install using PIP: 
+```
+pip install git+git://github.com/b0tting/simplegigaset.git
+```
 
 ## Example
 One example to show them all. The email and password are the credentials you would use for http://my.gigaset-elements.com.  
@@ -24,3 +29,4 @@ if simple.is_alarmed():
     simple.set_mode(SimpleGigaset.MODE_HOME)
 
 print("Are we cool again? %s" % simple.get_current_state()["state"])
+```
