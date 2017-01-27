@@ -11,7 +11,7 @@ Behind the sc(re)n(e)s both site and app connect to a JSON backend. Why they did
 - Setting and getting the current system mode
 - Checking if an intrusion is detected, right now!
  
- If you are looking for anything outside of this, consider the [CLI](https://github.com/dynasticorpheus/gigasetelements-cli) 
+If you are looking for anything outside of this, consider the [CLI](https://github.com/dynasticorpheus/gigasetelements-cli) 
 
 
 ## Example
